@@ -1,3 +1,7 @@
+/* ========================================
+   RESET
+======================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -19,22 +23,29 @@ a {
   text-decoration: none;
 }
 
-/* Navbar */
+
+/* ========================================
+   NAVBAR
+======================================== */
 
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100%;
   padding: 20px 40px;
+
   background: rgba(17, 17, 17, 0.9);
   backdrop-filter: blur(10px);
+
   z-index: 1000;
 }
 
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +58,7 @@ a {
 
 .logo span,
 .hero h1 span {
-  color: #7c3aed; /* Purple color */
+  color: #7c3aed;
 }
 
 .nav-links {
@@ -64,11 +75,15 @@ a {
   color: white;
 }
 
-/* HERO */
+
+/* ========================================
+   HERO
+======================================== */
 
 .hero {
   min-height: 100vh;
   max-width: 1100px;
+
   margin: 0 auto;
   padding: 180px 40px 100px;
 
@@ -78,7 +93,7 @@ a {
 }
 
 .hero-greeting {
-  color: #7c3aed; /* Purple color */
+  color: #7c3aed;
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -91,13 +106,16 @@ a {
 
 .hero h2 {
   max-width: 700px;
+
   font-size: 36px;
   color: #ddd;
+
   margin-bottom: 25px;
 }
 
 .hero-description {
   max-width: 600px;
+
   font-size: 18px;
   color: #999;
   line-height: 1.6;
@@ -105,6 +123,7 @@ a {
 
 .hero-buttons {
   margin-top: 35px;
+
   display: flex;
   gap: 15px;
 }
@@ -112,6 +131,7 @@ a {
 .button {
   padding: 14px 24px;
   border-radius: 8px;
+
   transition: transform 0.2s ease;
 }
 
@@ -120,28 +140,45 @@ a {
 }
 
 .primary {
-  background: #7c3aed; /* Purple color */
+  background: #7c3aed;
 }
 
 .secondary {
   border: 1px solid #444;
 }
 
-/* SECCIONES */
+
+/* ========================================
+   GENERAL SECTIONS
+======================================== */
 
 section:not(.hero) {
   max-width: 1100px;
   min-height: 500px;
+
   margin: 0 auto;
   padding: 100px 40px;
 }
 
-section:not(.hero) h2 {
-  font-size: 40px;
-  margin-bottom: 30px;
+
+/* ========================================
+   SECTION LABEL
+======================================== */
+
+.section-label {
+  color: #7c3aed;
+
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  margin-bottom: 15px;
 }
 
-/* ABOUT */
+
+/* ========================================
+   ABOUT
+======================================== */
 
 .about {
   display: flex;
@@ -149,27 +186,23 @@ section:not(.hero) h2 {
   gap: 60px;
 }
 
-.section-label {
-  color: #7c3aed; /* Purple color */
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-}
-
 .about-header {
   max-width: 700px;
+}
+
+.about-header h2 {
   font-size: clamp(40px, 6vw, 70px);
   line-height: 1.1;
 }
 
 .about-header h2 span {
-  color: #7c3aed; /* Purple color */
+  color: #7c3aed;
 }
 
 .about-content {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
+
   gap: 70px;
   align-items: start;
 }
@@ -182,6 +215,7 @@ section:not(.hero) h2 {
 
 .about-text p {
   color: #aaa;
+
   font-size: 18px;
   line-height: 1.7;
 }
@@ -204,14 +238,14 @@ section:not(.hero) h2 {
 
   background: #161616;
 
-  transition: 
+  transition:
     transform 0.2s ease,
     border-color 0.2s ease;
 }
 
 .about-card:hover {
   transform: translateY(-3px);
-  border-color: #7c3aed; /* Purple color */
+  border-color: #7c3aed;
 }
 
 .about-card-icon {
@@ -228,7 +262,10 @@ section:not(.hero) h2 {
   line-height: 1.5;
 }
 
-/* PROJECTS */
+
+/* ========================================
+   PROJECTS
+======================================== */
 
 .projects {
   display: flex;
@@ -243,6 +280,7 @@ section:not(.hero) h2 {
 .projects-header h2 {
   font-size: clamp(40px, 6vw, 70px);
   line-height: 1.1;
+
   margin-bottom: 25px;
 }
 
@@ -252,10 +290,13 @@ section:not(.hero) h2 {
 
 .projects-intro {
   max-width: 600px;
+
   color: #888;
+
   font-size: 18px;
   line-height: 1.6;
 }
+
 
 /* PROJECT CARD */
 
@@ -268,7 +309,6 @@ section:not(.hero) h2 {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
 
-
   overflow: hidden;
 
   border: 1px solid #2a2a2a;
@@ -276,6 +316,7 @@ section:not(.hero) h2 {
 
   background: #161616;
 }
+
 
 /* PROJECT IMAGE */
 
@@ -291,8 +332,10 @@ section:not(.hero) h2 {
   font-size: 50px;
   font-weight: bold;
   letter-spacing: 5px;
+
   color: #7c3aed;
 }
+
 
 /* PROJECT CONTENT */
 
@@ -313,8 +356,10 @@ section:not(.hero) h2 {
 
 .project-type {
   color: #7c3aed;
+
   font-size: 14px;
   font-weight: bold;
+
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -324,19 +369,22 @@ section:not(.hero) h2 {
   font-size: 14px;
 }
 
-.project-content h3 {
+.projects-content h3 {
   font-size: 42px;
   margin-bottom: 20px;
 }
 
 .project-description {
   color: #aaa;
+
   font-size: 17px;
   line-height: 1.7;
+
   margin-bottom: 35px;
 }
 
-/* ROLE */
+
+/* PROJECT ROLE */
 
 .project-role {
   margin-bottom: 35px;
@@ -357,11 +405,13 @@ section:not(.hero) h2 {
   line-height: 1.5;
 }
 
-/* TECHNOLOGIES */
+
+/* PROJECT TECHNOLOGIES */
 
 .project-technologies {
   display: flex;
   flex-wrap: wrap;
+
   gap: 10px;
 
   margin-top: auto;
@@ -377,10 +427,14 @@ section:not(.hero) h2 {
   font-size: 13px;
 }
 
-/* PROJECT CAROUSEL */
+
+/* ========================================
+   PROJECT CAROUSEL
+======================================== */
 
 .project-carousel {
   position: relative;
+
   width: 100%;
   height: 100%;
   min-height: 500px;
@@ -406,7 +460,8 @@ section:not(.hero) h2 {
   transition: opacity 0.2s ease;
 }
 
-/* BUTTONS */
+
+/* CAROUSEL BUTTONS */
 
 .carousel-button {
   position: absolute;
@@ -449,7 +504,8 @@ section:not(.hero) h2 {
   right: 20px;
 }
 
-/* INDICATORS */
+
+/* CAROUSEL INDICATORS */
 
 .carousel-indicators {
   position: absolute;
@@ -487,7 +543,9 @@ section:not(.hero) h2 {
 }
 
 
-/* TECHNOLOGIES */
+/* ========================================
+   TECHNOLOGIES
+======================================== */
 
 .technologies {
   display: flex;
@@ -502,6 +560,7 @@ section:not(.hero) h2 {
 .technologies-header h2 {
   font-size: clamp(40px, 6vw, 70px);
   line-height: 1.1;
+
   margin-bottom: 25px;
 }
 
@@ -511,16 +570,20 @@ section:not(.hero) h2 {
 
 .technologies-intro {
   max-width: 650px;
+
   color: #888;
+
   font-size: 18px;
   line-height: 1.6;
 }
+
 
 /* TECHNOLOGY GROUPS */
 
 .technologies-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   gap: 20px;
 }
 
@@ -546,6 +609,7 @@ section:not(.hero) h2 {
   margin-bottom: 20px;
   font-size: 20px;
 }
+
 
 /* TECHNOLOGY ITEMS */
 
@@ -587,11 +651,13 @@ section:not(.hero) h2 {
   color: #888;
 }
 
-/* LEGEND */
+
+/* TECHNOLOGY LEGEND */
 
 .technology-legend {
   display: flex;
   flex-wrap: wrap;
+
   gap: 25px;
 
   color: #777;
@@ -622,7 +688,9 @@ section:not(.hero) h2 {
 }
 
 
-/* CONTACT */
+/* ========================================
+   CONTACT
+======================================== */
 
 .contact {
   display: flex;
@@ -637,6 +705,7 @@ section:not(.hero) h2 {
 .contact-header h2 {
   font-size: clamp(50px, 7vw, 90px);
   line-height: 1;
+
   margin-bottom: 25px;
 }
 
@@ -648,6 +717,7 @@ section:not(.hero) h2 {
   max-width: 600px;
 
   color: #888;
+
   font-size: 18px;
   line-height: 1.7;
 }
@@ -655,8 +725,10 @@ section:not(.hero) h2 {
 .contact-content {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
+
   gap: 30px;
 }
+
 
 /* CONTACT LINKS */
 
@@ -702,7 +774,6 @@ section:not(.hero) h2 {
   border-radius: 10px;
 
   background: #222;
-
   color: #7c3aed;
 
   font-weight: bold;
@@ -729,6 +800,7 @@ section:not(.hero) h2 {
   color: #777 !important;
 }
 
+
 /* CV */
 
 .contact-cv {
@@ -751,7 +823,9 @@ section:not(.hero) h2 {
 
 .contact-cv p {
   color: #888;
+
   line-height: 1.6;
+
   margin-bottom: 30px;
 }
 
@@ -767,7 +841,6 @@ section:not(.hero) h2 {
   background: #7c3aed;
   color: white;
 
-  text-decoration: none;
   font-weight: 600;
 
   transition:
@@ -782,4 +855,70 @@ section:not(.hero) h2 {
 
 .cv-button span {
   font-size: 18px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+  margin-top: 120px;
+
+  border-top: 1px solid #2a2a2a;
+
+  padding: 50px 30px 30px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 40px;
+}
+
+.footer-info h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.footer-info p {
+  color: #777;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-links a {
+  color: #888;
+
+  font-size: 14px;
+
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #7c3aed;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #222;
+
+  color: #555;
+  font-size: 12px;
 }

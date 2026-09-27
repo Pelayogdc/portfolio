@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar'
-import ProjecCarousel from './components/ProjectCarousel'
+import ProjectCarousel from './components/ProjectCarousel'
 
 
 function App() {
@@ -102,7 +102,7 @@ function App() {
             </h2>
 
             <p className="projects-intro">
-              Algunos de los proyectos en los que he trabajado duarante mi formación
+              Algunos de los proyectos en los que he trabajado durante mi formación
               y mi aprendizaje como desarrollador.
             </p>
           </div>
@@ -111,7 +111,7 @@ function App() {
 
             <article className="project-card">
               <div className="project-image">
-                <ProjecCarousel />
+                <ProjectCarousel />
               </div>
 
               <div className="projects-content">
@@ -127,7 +127,7 @@ function App() {
 
                 <p className="project-description">
                   Aplicación de gestión de reservas desarrollada en equipo
-                  durante mis prñacticas de empresa. Desarrollada con Flutter.
+                  durante mis prácticas de empresa utilizando Flutter.
                 </p>
 
                 <div className="project-role">
@@ -293,7 +293,7 @@ function App() {
             </h2>
 
             <p>
-              Si estas buscando un desarrollador junior o quieres
+              Si estás buscando un desarrollador junior o quieres
               saber más sobre alguno de mis proyectos, puedes
               ponerte en contacto conmigo.
             </p>
@@ -379,6 +379,55 @@ function App() {
             </div>
           </div>
         </section>
+
+        <footer className="footer">
+
+          <div className="footer-content">
+
+            <div className="footer-info">
+              <h3>Pelayo González de Castro</h3>
+
+              <p>
+                Desarrollador de aplicaciones multiplataforma
+              </p>
+            </div>
+
+            <div className="footer-links">
+
+              <a
+                href="https://github.com/Pelayogdc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/pelayo-gonzález-de-castro-92b3a8198"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+
+              <a href="mailto:gonzalezdecastrop@gmail.com">
+                Email
+              </a>
+
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+
+            <p>
+              © 2026 Pelayo González de Castro
+            </p>
+
+            <p>
+              DAM · Flutter · Dart · Java
+            </p>
+          </div>
+        </footer>
       </main>
     </>
   )
