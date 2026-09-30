@@ -1142,7 +1142,7 @@ section:not(.hero) {
   }
 
   .technology-group {
-    margin: auto 15%;
+    margin: auto 10%;
     padding: 22px;
   }
 
@@ -1175,5 +1175,9 @@ section:not(.hero) {
 
   .contact-cv p {
     font-size: 16px;
+  }
+
+  .contact-links p {
+    font-size: 13px;
   }
 }
