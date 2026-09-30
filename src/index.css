@@ -1096,6 +1096,7 @@ section:not(.hero) {
     font-size: 24px;
   }
 
+
   .projects-content {
     padding: 30px 22px;
   }
@@ -1147,5 +1148,32 @@ section:not(.hero) {
 
   .technology-item {
     padding: 10px 0;
+  }
+
+  /* CONTACT */
+  
+  .contact {
+    gap: 40px;
+  }
+
+  .contact-header {
+    max-width: 100%;
+  }
+
+  .contact-header h2 {
+    margin-bottom: 20px;
+  }
+
+  .contact-header p:last-child {
+    font-size: 16px;
+  }
+
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .contact-cv p {
+    font-size: 16px;
   }
 }
