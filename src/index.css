@@ -927,7 +927,7 @@ section:not(.hero) {
 /* ================ RESPONSIVE NAVBAR =================*/
 
 .menu-button {
-  display: none !important;
+  display: none;
 
   background: none;
   border: none;
@@ -941,7 +941,10 @@ section:not(.hero) {
 
 /* ====================== MOBILE ===================*/
 
-@media (max-width: 78px) {
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+
   .navbar {
     padding: 18px 20px;
   }
@@ -982,5 +985,167 @@ section:not(.hero) {
 
   .nav-links.open a {
     padding: 15px 20px;
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: 100vh;
+    padding: 140px 20px 80px;
+  }
+
+  .hero-greeting {
+    font-size: 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(60px, 18vw, 90px);
+    margin-bottom: 15px;
+  }
+
+  .hero h2{
+    font-size:28px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+
+  /* ABOUT */
+
+  .about {
+    gap: 40px;
+  }
+
+  .about-header {
+    max-width: 1000%;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .about-cards {
+    gap: 15px;
+  }
+
+  .about-card {
+    padding: 20px;
+  }
+
+  /* PROYECTOS */
+
+  .projects {
+    gap: 40px;
+  }
+
+  .projects-header {
+    max-width: 100%;
+  }
+
+  .projects-header h2 {
+    margin-bottom: 20px;
+  }
+
+  .projects-intro {
+    font-size: 16px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-carousel {
+    min-height: 400px;
+  }
+
+  .project-carousel img {
+    height: 350px;
+    max-width: 75%;
+  }
+
+  .carousel-previous {
+    left: 10px;
+  }
+
+  .carousel-next {
+    right: 10px;
+  }
+
+  .carousel-button {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+  }
+
+  .projects-content {
+    padding: 30px 22px;
+  }
+
+  .projects-content h3 {
+    font-size: 34px;
+  }
+
+  .project-description {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .project-role {
+    margin-bottom: 25px;
+  }
+
+  .project-role li {
+    margin-bottom: 8px;
+  }
+
+  /* TECHNOLOGIES */
+
+  .technologies {
+    gap: 40px;
+  }
+
+  .technologies-header {
+    max-width: 100%;
+  }
+
+  .technologies-header h2 {
+    margin-bottom: 20px;
+  }
+
+  .technologies-intro {
+    font-size: 16px;
+  }
+
+  .technologies-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .technology-group {
+    margin: auto 15%;
+    padding: 22px;
+  }
+
+  .technology-item {
+    padding: 10px 0;
   }
 }

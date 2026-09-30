@@ -20,7 +20,7 @@ function Navbar() {
                 </button>
 
 
-                <div className={"nav-links ${menuOpen ? 'open : ''}"}>
+                <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
                     <a href="#sobre-mi" onClick={() => setMenuOpen(false)}>Sobre mí</a>
                     <a href="#proyectos" onClick={() => setMenuOpen(false)}>Proyectos</a>
                     <a href="#tecnologias" onClick={() => setMenuOpen(false)}>Tecnologías</a>
