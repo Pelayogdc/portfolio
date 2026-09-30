@@ -1178,6 +1178,27 @@ section:not(.hero) {
   }
 
   .contact-links p {
-    font-size: 13px;
+    font-size: 14px;
+  }
+
+  .contact-content {
+    gap: 20px
+    ;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    margin-top: 40px;
+    padding: 40px 20px 25px;
+  }
+
+  .footer-content {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-links {
+    gap: 20px;
   }
 }
