@@ -1194,7 +1194,7 @@ section:not(.hero) {
   }
 
   .footer-content {
-    align-items: flex-start;
+    align-items: flex;
     gap: 20px;
   }
 
