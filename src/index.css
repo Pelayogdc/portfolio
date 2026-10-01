@@ -132,11 +132,14 @@ a {
   padding: 14px 24px;
   border-radius: 8px;
 
-  transition: transform 0.2s ease;
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
 }
 
 .primary {
@@ -849,7 +852,7 @@ section:not(.hero) {
 }
 
 .cv-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.02);
   background: #6d28d9;
 }
 
@@ -1031,7 +1034,7 @@ section:not(.hero) {
   }
 
   .about-header {
-    max-width: 1000%;
+    max-width: 100%;
   }
 
   .about-content {
@@ -1142,7 +1145,6 @@ section:not(.hero) {
   }
 
   .technology-group {
-    margin: auto 10%;
     padding: 22px;
   }
 
@@ -1182,8 +1184,7 @@ section:not(.hero) {
   }
 
   .contact-content {
-    gap: 20px
-    ;
+    gap: 20px;
   }
 
   /* FOOTER */
@@ -1194,11 +1195,115 @@ section:not(.hero) {
   }
 
   .footer-content {
-    align-items: flex;
     gap: 20px;
   }
 
   .footer-links {
     gap: 20px;
+  }
+}
+
+
+/* ======================= HERO ANIMATIONS =========================*/
+
+.hero-greeting {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.hero h1{
+  animation: fadeUp 0.6s ease 0.15s forwards;
+opacity: 0;
+}
+
+.hero h2 {
+  animation: fadeUp 0.6s ease 0.3s forwards;
+  opacity: 0;
+}
+
+.hero-description {
+  animation: fadeUp 0.6s ease 0.45s forwards;
+  opacity: 0;
+}
+
+.hero-buttons {
+  animation: fadeUp 0.6s ease 0.6s forwards;
+  opacity: 0;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+}
+
+/* SCROLL REVEAL*/
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TARJETAS SOBRE MI */
+
+.reveal-card {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: 
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+/* TARJETAS TECHNOLOY */
+
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+
+
+
+/* ===============================================
+    ANIMATION KEYFRAMES
+    ===============================================*/
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

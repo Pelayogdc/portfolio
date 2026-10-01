@@ -1,8 +1,30 @@
+import {useEffect} from 'react'
 import Navbar from './components/Navbar'
 import ProjectCarousel from './components/ProjectCarousel'
 
 
 function App() {
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.reveal, .reveal-card')
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.30 }
+    )
+  
+
+  elements.forEach((element) => observer.observe(element))
+  return () => observer.disconnect()
+  }, [])
+
   return (
     <>
       <Navbar />
@@ -32,7 +54,7 @@ function App() {
           </div>
         </section>
 
-        <section id="sobre-mi" className="about">
+        <section id="sobre-mi" className="about reveal">
           <div className="about-header">
             <p className="section-label">SOBRE MÍ</p>
 
@@ -63,7 +85,7 @@ function App() {
             </div>
 
             <div className="about-cards">
-              <div className="about-card">
+              <div className="about-card reveal-card reveal-delay-1">
                 <span className="about-card-icon">🎓</span>
 
                 <div>
@@ -72,7 +94,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="about-card">
+              <div className="about-card reveal-card reveal-delay-2">
                 <span className="about-card-icon">💻</span>
 
                 <div>
@@ -81,7 +103,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="about-card">
+              <div className="about-card reveal-card reveal-delay-3">
                 <span className="about-card-icon">🚀</span>
 
                 <div>
@@ -93,7 +115,7 @@ function App() {
           </div>
         </section>
 
-        <section id="proyectos" className="projects">
+        <section id="proyectos" className="projects reveal">
           <div className="projects-header">
             <p className="section-label">PROYECTOS</p>
 
@@ -160,7 +182,7 @@ function App() {
           </div>
         </section>
 
-        <section id="tecnologias" className="technologies">
+        <section id="tecnologias" className="technologies reveal">
 
           <div className="technologies-header">
             <p className="section-label">TECNOLOGÍAS</p>
@@ -178,7 +200,7 @@ function App() {
 
           <div className="technologies-grid">
 
-            <div className="technology-group">
+            <div className="technology-group reveal-card reveal-delay-1">
               <h3>Lenguajes</h3>
 
               <div className="technology-list">
@@ -209,7 +231,7 @@ function App() {
               </div>
             </div>
 
-            <div className="technology-group">
+            <div className="technology-group reveal-card reveal-delay-2">
               <h3>Desarrollo</h3>
 
               <div className="technology-list">
@@ -235,7 +257,7 @@ function App() {
               </div>
             </div>
 
-            <div className="technology-group">
+            <div className="technology-group reveal-card reveal-delay-3">
               <h3>Bases de datos</h3>
 
               <div className="technology-list">
@@ -251,7 +273,7 @@ function App() {
               </div>
             </div>
 
-            <div className="technology-group">
+            <div className="technology-group reveal-card reveal-delay-4">
               <h3>Herramientas</h3>
 
               <div className="technology-list">
@@ -283,7 +305,7 @@ function App() {
 
         </section>
 
-        <section id="contacto" className="contact">
+        <section id="contacto" className="contact reveal">
 
           <div className="contact-header">
             <p className="section-label">CONTACTO</p>
